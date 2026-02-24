@@ -6,19 +6,25 @@ import Contact from "@/components/Contact";
 import Navbar from "@/components/Navbar";
 import ParticlesBg from "@/components/ParticlesBg";
 import Experience from "@/components/Experience";
+import Socials from "@/components/Socials";
+import FloatingSocials from "@/components/FloatingSocials";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
     // <main className="min-h-screen bg-black text-white">
     <main className="relative min-h-screen text-white"> 
       <ParticlesBg />
+       <FloatingSocials />
       <Navbar />
       <Hero />
       <About />
       <Experience />
       <Skills />
       <Projects />
+      <Socials />
       <Contact />
+      <Footer />
      </main> 
     // </main>
   );

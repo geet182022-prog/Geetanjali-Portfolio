@@ -2,10 +2,13 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { TypeAnimation } from "react-type-animation";
+import ParticlesBackground from "./ParticlesBackground";
+import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="min-h-screen flex items-center justify-center px-6 pt-24">
+    <section className="min-h-screen flex items-center justify-center px-6 pt-24 relative">
+      <ParticlesBackground />
       <div className="max-w-6xl grid md:grid-cols-2 gap-10 items-center">
         {/* Left */}
         <motion.div
@@ -48,11 +51,26 @@ export default function Hero() {
           </motion.div>
 
           <div className="mt-6 flex gap-4">
-            <Button className="bg-cyan-400 text-black hover:bg-cyan-300">
+            <Button
+              onClick={() =>
+                document
+                  .getElementById("projects")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
+              className="bg-cyan-400 text-black hover:bg-cyan-300"
+            >
               View Projects
             </Button>
 
-            <Button variant="outline" className="border-cyan-400 text-cyan-300">
+            <Button
+              onClick={() =>
+                document
+                  .getElementById("contact")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
+              variant="outline"
+              className="border-cyan-400 text-cyan-300"
+            >
               Contact Me
             </Button>
           </div>
@@ -67,7 +85,13 @@ export default function Hero() {
         >
           <div className="w-72 h-72 rounded-full bg-gradient-to-r from-cyan-400 to-purple-500 blur-3xl opacity-40 absolute"></div>
           <div className="w-60 h-60 rounded-full border-4 border-cyan-400 flex items-center justify-center text-6xl font-bold relative">
-            G
+            <Image
+              src="/contactUs.jpeg"
+              alt="Geetanjali"
+              fill
+              className="rounded-full object-cover border-4 border-cyan-400 shadow-[0_0_40px_rgba(34,211,238,0.6)]"
+              priority
+            />
           </div>
         </motion.div>
       </div>
