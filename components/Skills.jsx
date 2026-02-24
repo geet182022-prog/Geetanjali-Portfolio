@@ -94,7 +94,7 @@ export default function Skills() {
         {skillGroups.map((group, i) => (
           <div
             key={i}
-            className="p-6 rounded-2xl bg-black/40 border border-white/10 
+            className="p-6 rounded-2xl bg-gray-900/20 border border-white/10 
                        hover:border-cyan-400 transition"
           >
             {/* Title */}

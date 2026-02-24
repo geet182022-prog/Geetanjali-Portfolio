@@ -107,7 +107,7 @@ export default function Projects() {
           <Card
             key={p.title}
             onClick={() => setSelectedProject(p)}
-            className="cursor-pointer p-6 bg-black/40 border border-white/10 
+            className="cursor-pointer p-6 bg-gray-800/25 border border-white/10 
                        hover:border-cyan-400 transition rounded-2xl 
                        hover:scale-105"
           >
